@@ -1,0 +1,144 @@
+"1"	"login1"	"login"	"http://localhost:9527/#/login?redirect=%2Fdashboard"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'username':'admin',
+	'password':'123456'
+}"	"code : 200
+message : success"
+"2"	"login2"	"login"	"http://localhost:9527/#/login?redirect=%2Fdashboard"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'username':'123456',
+	'password':'123456'
+}"	"code : 200
+message : success"
+"3"	"login3"	"login"	"http://localhost:9527/#/login?redirect=%2Fdashboard"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'username':'admin123',
+	'password':'123456'
+}"	"code : 201
+message : 用户名不正确"
+"4"	"login4"	"login"	"http://localhost:9527/#/login?redirect=%2Fdashboard"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'username':'adminhj',
+	'password':'123456'
+}"	"code : 202
+message : 用户不存在"
+"5"	"login5"	"login"	"http://localhost:9527/#/login?redirect=%2Fdashboard"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'username':'admin'}"	"code : 204
+message : 未输入密码"
+"6"	"login6"	"login"	"http://localhost:9527/#/login?redirect=%2Fdashboard"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'username':'admin',
+	'password':'12345678'
+}"	"code : 205
+message : 密码错误"
+"7"	"login7"	"login"	"http://localhost:9527/#/login?redirect=%2Fdashboard"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'username':'admin',
+	'password':'1234'
+}"	"code : 206
+message : 密码长度不符合规范"
+"8"	"enquire1"	"user query"	"http://localhost:8080/SysApi/sysUser?page=1&limit=10&keyword=admin"	"get"	""	"null"	""	""	""	""	"code : 200
+message : success"
+"9"	"enquire2"	"role query"	"http://localhost:8080/SysApi/sysRole?page=1&limit=10&keyword=%E4%BD%95%E4%BD%B3"	"get"	""	"null"	""	""	""	""	"code : 200
+message : success"
+"10"	"enquire3"	"role query"	"http://localhost:8080/SysApi/sysRole?page=1&limit=10&keyword=admin"	"get"	""	"null"	""	""	""	""	"code : 200
+message : success"
+"11"	"enquire4"	"role query"	"http://localhost:8080/SysApi/sysRole?page=1&limit=10&keyword=hj"	"get"	""	"null"	""	""	""	""	"code : 200
+message : success"
+"12"	"enquire5"	"permission query"	"http://localhost:8080/SysApi/sysPermission?page=1&limit=10&keyword=hj"	"get"	"content-type"": ""application/json"	"null"	""	""	""	""	"code : 200
+message : success"
+"13"	"enquire6"	"permission query"	"http://localhost:8080/SysApi/sysPermission?page=1&limit=10&keyword=login"	"get"	"content-type"": ""application/json"	"null"	""	""	""	""	"code : 200
+message : success"
+"14"	"add1"	"add role"	"http://localhost:8080/SysApi/sysRole/create"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'cnname':'何佳',
+	'role':'hejia',
+	'description':'shihejia'
+}"	"code : 200
+message : success"
+"15"	"add2"	"add role"	"http://localhost:8080/SysApi/sysRole/create"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'cnname':'Tom',
+	'role':'hejia',
+	'description':'tom'
+}"	"code : 500
+message : 出现已存在的角色标识"
+"16"	"add3"	"add role"	"http://localhost:8080/SysApi/sysRole/create"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'cnname':'何佳',
+	'role':'hejia1',
+	'description':'shihejia1'
+}"	"code : 500
+message : 出现已存在的角色名称"
+"17"	"add4"	"add role"	"http://localhost:8080/SysApi/sysRole/create"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'cnname':'何佳佳',
+	'role':'hejia',
+	'description':'shihejia1'
+}"	"code : 200
+message : success"
+"18"	"add5"	"add role"	"http://localhost:8080/SysApi/sysRole/create"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'cnname':'BTF',
+	'role':'BTF',
+	'description':'不脱发f'
+}"	"code : 200
+message : success"
+"19"	"add6"	"add permission"	"http://localhost:8080/SysApi/sysPermission/create"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'available': false
+	'cnname':'read'
+	'name' : 'read'
+	'remark':'read'
+}"	"code : 200
+message : success"
+"20"	"add7"	"add permission"	"http://localhost:8080/SysApi/sysPermission/create"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'available': false
+	'cnname':'read'
+	'name' : 'readdr'
+	'remark':'readdr'
+}"	"code : 200
+message : success"
+"21"	"add8"	"add permission"	"http://localhost:8080/SysApi/sysPermission/create"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'available': false
+	'cnname':'readd'
+	'name' : 'read'
+	'remark':'readd'
+}"	"code : 500
+message : 出现已存在的权限标识"
+"22"	"add9"	"add permission"	"http://localhost:8080/SysApi/sysPermission/create"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'available': false
+	'cnname':'readdd'
+	'name' : 'readdd'
+	'remark':'read'
+}"	"code : 200
+message : success"
+"23"	"edit1"	"edit user"	"http://localhost:8080/SysApi/sysUser/1"	"posr"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'cnname' :'adminhjhj',
+	'name':	'adminhjhj',
+	'phone':'123456',
+	'0':""ROLE_ADMIN"",
+	'1':'ROLE_hj',
+	'username':	'admin'
+}"	"code : 200
+message : success"
+"24"	"edit2"	"edit user"	"http://localhost:8080/SysApi/sysUser/1"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'cnname' :'adminhjhj',
+	'name':	'adminhjhj',
+	'phone':'12345666666666666666666666666666666666666666666666666666666666',
+	'0':""ROLE_ADMIN"",
+	'1':'ROLE_hj',
+	'username':	'admin'
+}"	"code : 500
+message : 电话号码错误"
+"25"	"edit3"	"edit user"	"http://localhost:8080/SysApi/sysUser/1"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'cnname' :'adminhjhj',
+	'name':	'adminhjhjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj',
+	'phone':'123456',
+	'0':""ROLE_ADMIN"",
+	'1':'ROLE_hj',
+	'username':	'admin'
+}"	"code : 500
+message : 登录名错误"
+"26"	"edit4"	"edit user"	"http://localhost:8080/SysApi/sysUser/1"	"post"	"content-type"": ""application/json"	"null"	"json"	""	""	"{
+	'cnname' :'adminhjhjhhhhhhhhhhhhhhhhhhhhhhhhhhhh',
+	'name':	'adminhjhj',
+	'phone':'123456',
+	'0':""ROLE_ADMIN"",
+	'1':'ROLE_hj',
+	'username':	'admin'
+}"	"code : 500
+message : 中文名错误"
+"27"	""	""	""	""	""	""	""	""	""	""	""
+"28"	""	""	""	""	""	""	""	""	""	""	""
+"29"	""	""	""	""	""	""	""	""	""	""	""
+"30"	""	""	""	""	""	""	""	""	""	""	""
+"31"	""	""	""	""	""	""	""	""	""	""	""
