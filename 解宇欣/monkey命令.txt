@@ -1,0 +1,18 @@
+包名：com.cnezsoft.xxm
+
+随机测试
+1.monkey -p com.cnezsoft.xxm -v 1000
+2.monkey -p com.cnezsoft.xxm -v 1000000
+随机延迟测试
+3.monkey  -p com.cnezsoft.xxm  -s 100 --throttle 1000 --randomize-throttle --ignore-crashes --ignore-timeouts -v -v 10000
+触摸事件与其他
+4.monkey -p com.cnezsoft.xxm --throttle 200 --pct-touch 30 --pct-anyevent 50 -v -v 10000
+5.monkey -p com.cnezsoft.xxm --throttle 200 --pct-touch 30 --pct-motion 50 -v -v 10000
+6.monkey -p com.cnezsoft.xxm --throttle 200 --pct-touch 30 --pct-trackball 50 -v -v 10000
+7.monkey -p com.cnezsoft.xxm --throttle 200 --pct-touch 30 --pct-nav 50 -v -v 10000
+8.monkey -p com.cnezsoft.xxm --throttle 200 --pct-touch 30 --pct-flip 50 -v -v 10000
+旋转测试
+9..monkey -p com.cnezsoft.xxm --pct-rotation 100 --throttle 2000 10000
+
+
+
