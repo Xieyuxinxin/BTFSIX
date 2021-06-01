@@ -16,7 +16,9 @@ public class Xuan {
 	// 联系人
 	// 1.用户离线，检验点击邮件图标能便捷发送邮件
 	public AndroidElement ContactPerson() {
-		return driver.findElementByXPath("//android.view.View[@content-desc=\'联系人 联系人 第 3 个标签，共 4 个\']");
+		return driver.findElementByAccessibilityId("联系人\r\n" + 
+				"联系人\r\n" + 
+				"第 3 个标签，共 4 个");
 	}
 
 	public AndroidElement OffLinePerson() {
@@ -132,7 +134,9 @@ public class Xuan {
 	// 我的
 	// 12.查看资料
 	public AndroidElement My() {
-		return driver.findElementByXPath("//android.view.View[@content-desc=\"我的 我的 第 4 个标签，共 4 个\"]");
+		return driver.findElementByAccessibilityId("我的\r\n" + 
+				"我的\r\n" + 
+				"第 4 个标签，共 4 个");
 	}
 
 	public AndroidElement MyInformation() {
