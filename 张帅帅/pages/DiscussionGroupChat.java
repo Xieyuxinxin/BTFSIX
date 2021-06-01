@@ -27,7 +27,8 @@ public class DiscussionGroupChat {
 	}
 	//admin的头像
 	public AndroidElement admin() {
-		return driver.findElementByAccessibilityId("A");
+//		return driver.findElementByAccessibilityId("A");
+		return driver.findElement(By.xpath("(//android.view.View[@content-desc=\"A\"])[1]"));
 	}
 	//@test1
 	public AndroidElement test1() {
@@ -51,7 +52,8 @@ public class DiscussionGroupChat {
 	}
 	//重命名
 	public AndroidElement rename() {
-		return driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"重命名\"]"));
+//		return driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"重命名\"]"));
+		return driver.findElementByAccessibilityId("重命名");
 	}
 	//输入讨论组名
 	public AndroidElement init_name() {
@@ -67,7 +69,8 @@ public class DiscussionGroupChat {
 	}
 	//退出讨论组
 	public AndroidElement sign_out_group() {
-		return driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"退出讨论组\"]"));
+//		return driver.findElement(By.xpath("//android.widget.Button[@content-desc=\"退出讨论组\"]"));
+		return driver.findElementByAccessibilityId("退出讨论组");
 	}
 	//确认退出讨论组
 	public AndroidElement sign_out_confirm() {
